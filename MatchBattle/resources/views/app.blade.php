@@ -16,28 +16,31 @@
     @include('components.sidebar')
     @include('components.carousel')
     <br>
+    <form action="" method="post">
     <div class="options">
-        <div class="input-group">
-            <input type="text" name="text" autocomplete="off" class="input" required>
-            <label class="user-label">First Name</label>
-        </div>
-        <br>
-        <button class="button">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span> Unirme a sala
-        </button>
-        <br>
-        <button class="button">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span> Crear sala
-        </button>
+
+            @csrf
+                    <div class="input-group">
+                        <input type="text" name="text" autocomplete="off" class="input" required>
+                        <label class="user-label">Nickname</label>
+                    </div>
+                    <br>
+                    <button class="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Unirme a sala
+                    </button>
+                    <br>
+                    <button class="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Crear sala
+                    </button>
 
     </div>
-
+    </form>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
