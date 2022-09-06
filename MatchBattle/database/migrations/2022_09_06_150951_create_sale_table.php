@@ -16,7 +16,7 @@ class CreateSaleTable extends Migration
         Schema::create('sale', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('code');
-
+            $table->bigInteger('type');
             $table->timestamps();
         });
     }
