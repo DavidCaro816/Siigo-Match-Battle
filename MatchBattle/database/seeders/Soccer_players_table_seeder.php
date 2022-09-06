@@ -14,16 +14,19 @@ class Soccer_players_table_seeder extends Seeder
      */
     public function run()
     {
-        $name=['Cristiano Ronaldo', 'Lionel Messi', ];
-        $age=[''];
-        $avg=[''];
-        $speed=[''];
-        $endurance=[''];
-        $skill=[''];
-        $defending=[''];
-        $strong=[''];
-        $img=[''];
-        $position_id=[''];
+        $name = ['RONALDO', 'LIONEL MESSI', 'KARIM BENZEMA', 'BRUYNE', 'COMAN',
+            'COURTOIS', 'JONG', 'DEMBÉLÉ', 'HAALAND'
+            , 'KANTE', 'KIMMINCH', 'LAPORTE', 'LEWANDOSKY', 'DIAZ', 'MÁNE',
+            'MBAPPE', 'MODRIC', 'NEUER', 'NEYMAR','RAMOS','RASHFORD','SALAH','STERLING','STEGEN','WALKER',''];
+        $age = [''];
+        $avg = [''];
+        $speed = [''];
+        $endurance = [''];
+        $skill = [''];
+        $defending = [''];
+        $strong = [''];
+        $img = [''];
+        $position_id = [''];
 
         $soccer_player = Soccer_player::create([
 
