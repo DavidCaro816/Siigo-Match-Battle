@@ -22,7 +22,7 @@ body{
 }
 
 .carrousel_content_1{
-    border: 1px solid #ffffff;
+    border: 1px solid #BF7BFFC7;
     background: #131821;
     border-radius: 1rem;
     width: 1500px;
@@ -66,9 +66,13 @@ body{
 .profile p{
     margin-top: 1px;
 }
-
+/*Carousel*/
+.info, .text, .img{
+    background-color: red;
+    width: 100%;
+}
 /*buttons*/
-/* From uiverse.io by @menezes11 */
+
 .button {
     position: relative;
     /*padding: 0.5em 1.9em;*/

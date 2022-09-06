@@ -26,7 +26,7 @@ class CreateSoccerPlayerTable extends Migration
             $table->string('img');
             $table->bigInteger('position_id')->unsigned();
 
-            $table->foreign('position_id')->references('id')->on('position');
+            $table->foreign('position_id')->references('id')->on('positions');
 
         });
     }

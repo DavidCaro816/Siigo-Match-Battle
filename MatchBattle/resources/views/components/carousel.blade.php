@@ -6,7 +6,9 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="carrousel_content_1">
-
+                <div class="info"></div>
+                <div class="text"></div>
+                <div class="img"></div>
             </div>
         </div>
         <div class="carousel-item">
