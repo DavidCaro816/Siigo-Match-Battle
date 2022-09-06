@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Sale;
 use Illuminate\Http\Request;
 
 class Sale_controller extends Controller
@@ -13,7 +14,8 @@ class Sale_controller extends Controller
      */
     public function index()
     {
-        //
+        $sale = Sale::where('type', 1)->get();
+        return view('app', compact('sale'));
     }
 
     /**
@@ -23,7 +25,7 @@ class Sale_controller extends Controller
      */
     public function create()
     {
-        //
+
     }
 
     /**
@@ -35,6 +37,9 @@ class Sale_controller extends Controller
     public function store(Request $request)
     {
         //
+        $sale = Sale::create($request);
+        return redirect()->route('game');
+
     }
 
     /**
@@ -45,7 +50,8 @@ class Sale_controller extends Controller
      */
     public function show($id)
     {
-        //
+        $sale = Sale::find($id);
+        return = sal
     }
 
     /**
