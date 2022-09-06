@@ -32,6 +32,7 @@ body{
 
 .navbar{
     width: 100vw;
+    padding: 0!important;
     display:grid;
     grid-template-columns: 30% 70%;
 }
@@ -42,10 +43,21 @@ body{
 
 }
 .profile{
+    margin-right: 40px;
     display: flex;
     align-content: center;
     justify-content: right;
     color:#ffffff;
+}
+.profile div{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+}
+.profile p{
+    padding: 0px;
+    margin: 0px;
 }
 .profile img{
     margin-left: 20px;
@@ -59,7 +71,7 @@ body{
 /* From uiverse.io by @menezes11 */
 .button {
     position: relative;
-    padding: 0.5em 1.9em;
+    /*padding: 0.5em 1.9em;*/
     outline: none;
     border: 1px solid #ffffff;
     background: #16213E;
