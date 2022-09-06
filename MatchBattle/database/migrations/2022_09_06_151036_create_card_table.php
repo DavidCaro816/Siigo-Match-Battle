@@ -15,6 +15,7 @@ class CreateCardTable extends Migration
     {
         Schema::create('card', function (Blueprint $table) {
             $table->id();
+            $table->string('img');
             $table->string('category');
             $table->bigInteger('soccer_player_id')->unsigned();
             $table->bigInteger('player_id')->unsigned();
