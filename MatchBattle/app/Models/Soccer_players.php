@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Soccer_player extends Model
+class Soccer_players extends Model
 {
     use HasFactory;
     protected $fillable = [

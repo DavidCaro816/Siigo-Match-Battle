@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Soccer_player;
+use App\Models\Soccer_players;
 use Illuminate\Database\Seeder;
 
 class Soccer_players_table_seeder extends Seeder
@@ -64,7 +64,7 @@ class Soccer_players_table_seeder extends Seeder
         $img = [''];
         $position_id = [''];
 
-        $soccer_player = Soccer_player::create([
+        $soccer_player = Soccer_players::create([
 
             'name' => '',
             'age' => '',

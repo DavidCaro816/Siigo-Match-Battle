@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePlayerTable extends Migration
+class CreateCardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreatePlayerTable extends Migration
      */
     public function up()
     {
-        Schema::create('player', function (Blueprint $table) {
+        Schema::create('cards', function (Blueprint $table) {
             $table->id();
-            $table->string('nickname');
-            $table->bigInteger('role');
+            $table->string('img');
+            $table->string('category');
+            $table->bigInteger('soccer_player_id')->unsigned();
 
-
+            $table->foreign('soccer_player_id')->references('id')->on('soccer_players');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreatePlayerTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('player');
+        Schema::dropIfExists('card');
     }
 }

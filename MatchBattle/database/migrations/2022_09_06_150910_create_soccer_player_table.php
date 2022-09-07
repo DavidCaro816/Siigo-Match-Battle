@@ -13,13 +13,14 @@ class CreateSoccerPlayerTable extends Migration
      */
     public function up()
     {
-        Schema::create('soccer_player', function (Blueprint $table) {
+        Schema::create('soccer_players', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->bigInteger('age');
             $table->bigInteger('avg');
             $table->bigInteger('speed');
             $table->bigInteger('endurance');
+            $table->bigInteger('strong');
             $table->bigInteger('skill');
             $table->bigInteger('defending');
             $table->bigInteger('shoot');
@@ -27,7 +28,7 @@ class CreateSoccerPlayerTable extends Migration
             $table->bigInteger('position_id')->unsigned();
 
             $table->foreign('position_id')->references('id')->on('positions');
-
+            $table->timestamps();
         });
     }
 
