@@ -45,11 +45,11 @@ class Sale_controller extends Controller
         $array["type"] = 1;
         $sale = Sale::create($array);
 
-//        return redirect()->route('nombreRuta');
         $request = $request->all();
         $request["role"] = 1;
         $player = Player::create($request);
 //        dd($request);
+        return redirect()->route('game');
     }
 
     /**

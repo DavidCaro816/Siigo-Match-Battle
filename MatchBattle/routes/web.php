@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 Route::resource('juego', \App\Http\Controllers\Sale_controller::class);
 
+Route::get('/game', function (){
+
+});
+
 
 
 
