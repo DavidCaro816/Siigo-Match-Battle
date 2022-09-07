@@ -16,7 +16,7 @@ for($i = 1; $i <= 32; $i++) {
     // si no a salido añadimos al array
     $player[
         $cartas[] =  $aleatorio
-    ]
+    ];
 
 }
 foreach($cartas as $carta) {
