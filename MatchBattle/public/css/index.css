@@ -43,7 +43,7 @@ body{
 
 }
 .content_img{
-    width: 120px;
+
     background-color: #131821
 ;}
 .content_img2{
@@ -53,13 +53,17 @@ body{
 }.content_img img{
     padding-left: 30px;
      background-color: #131821;
-    width: 200px;
+    width: 180px;
 
 }.content_img2 img{
-margin-left: 501px;
+
+    padding-left: 30px;
       background-color: #131821;
-    width: 200px;
+    width: 180px;
 }
+ .content_tex{
+
+ }
 .navbar{
     width: 100vw;
     padding: 0!important;

@@ -16,11 +16,11 @@ class CreateGameTable extends Migration
         Schema::create('game', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('player_id')->unsigned();
-            $table->bigInteger('sale_id')->unsigned();
+            $table->bigInteger('room_id')->unsigned();
             $table->bigInteger('card_id')->unsigned();
 
             $table->foreign('player_id')->references('id')->on('players');
-            $table->foreign('sale_id')->references('id')->on('sale');
+            $table->foreign('room_id')->references('id')->on('room');
             $table->foreign('card_id')->references('id')->on('cards');
 
 

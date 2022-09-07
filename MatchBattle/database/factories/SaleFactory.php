@@ -2,13 +2,13 @@
 
 namespace Database\Factories;
 
-use App\Models\Sale;
+use App\Models\Room;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
 class SaleFactory extends Factory
 {
-    protected $model = Sale::class;
+    protected $model = Room::class;
 
     public function definition()
     {

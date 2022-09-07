@@ -4,10 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Game;
 use App\Models\Player;
-use App\Models\Sale;
+use App\Models\Room;
 use Illuminate\Http\Request;
 
-class Sale_controller extends Controller
+class Room_controller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class Sale_controller extends Controller
      */
     public function index()
     {
-        $sale = Sale::where('type', 1)->get();
+        $sale = Room::where('type', 1)->get();
         return view('app', compact('sale'));
     }
 
@@ -44,7 +44,7 @@ class Sale_controller extends Controller
         $array = [];
         $array["code"] = $code;
         $array["type"] = 1;
-        $sale = Sale::create($array);
+        $sale = Room::create($array);
 
         $request = $request->all();
         $request["role"] = 1;
@@ -73,7 +73,7 @@ class Sale_controller extends Controller
      */
     public function show($id)
     {
-//        $sale = Sale::find($id)->where('type', '')->get();
+//        $sale = Room::find($id)->where('type', '')->get();
     }
 
     /**
