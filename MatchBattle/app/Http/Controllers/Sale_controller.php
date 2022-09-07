@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Game;
 use App\Models\Player;
 use App\Models\Sale;
 use Illuminate\Http\Request;
@@ -48,12 +49,20 @@ class Sale_controller extends Controller
         $request = $request->all();
         $request["role"] = 1;
         $player = Player::create($request);
-//        dd($request);
-<<<<<<< HEAD
 
-=======
-        return redirect()->route('game');
->>>>>>> 733a102efaf6a3f2a0b0c569caaacb25aedfa161
+        $datos_game = [
+            "player_id"=> $player->id,
+            "sale_id" => $sale->id,
+            "card_id" => "1",
+        ];
+        $game = Game::create($datos_game);
+
+
+//        dd($player);
+//        echo $player->id;
+
+//        dd($request);
+//        return redirect()->route('game');
     }
 
     /**
@@ -99,5 +108,9 @@ class Sale_controller extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function queryPlayer(){
+        $players = Game::where();
+        return view('game', compact('players'));
     }
 }
