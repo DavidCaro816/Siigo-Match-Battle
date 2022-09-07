@@ -8,11 +8,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{url('css/game.css')}}">
     <link rel="stylesheet" href="{{url('css/rarity.css')}}">
+
 </head>
 <body>
 <div class="container">
     <article class="con-num-sala">
-<p>3243543 {{--{{$room->code}}--}}</p>
+<p>3243543 {{--{{$room->coode}}--}}</p>
     </article>
 
     @foreach($soccer as $player)
