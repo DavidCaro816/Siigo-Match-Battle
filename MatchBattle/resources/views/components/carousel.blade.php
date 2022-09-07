@@ -11,11 +11,8 @@
                         <img src="{{url('img/default_card 2.png')}}" alt="">
                     </div>
                     <div class="content_tex">
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic
-                            typesetting, remaining essentially unchanged.
+                        <p>¡Juega Ahora! Diversión la instante con tus estrellas favoritas, Invita a tus amigos a jugar <span>Sisgo Match Battle</span>,
+                            desde 2 jugadores hasta 7 jugadores que podrán vivir una diversión deslumbrante.
                             </p>
                     </div>
 
@@ -33,11 +30,7 @@
                             <img src="{{url('img/default_card 4.png')}}" alt="">
                         </div>
                         <div class="content_tex">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                                been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                galley of type and scrambled it to make a type specimen book. It has survived not only five
-                                centuries, but also the leap into electronic
-                                typesetting, remaining essentially unchanged.
+                            <p>En Sisgo Match Battle, podrás encontrar una gran varierad de variedad de cartas, que aportan desde puntos adicionales hasta la posibilidad de ganar la ronda al instante
                             </p>
                         </div>
 
@@ -46,7 +39,6 @@
                         </div>
                 </div>
 
-                <img src="https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg" alt="">
             </div>
         </div>
 
