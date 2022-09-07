@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Player;
 use App\Models\Sale;
 use Illuminate\Http\Request;
 
@@ -25,7 +26,7 @@ class Sale_controller extends Controller
      */
     public function create()
     {
-
+        $temp = 'a';
     }
 
     /**
@@ -37,11 +38,18 @@ class Sale_controller extends Controller
     public function store(Request $request)
     {
         //
-        $request=rand(100000,999999);
+        $code=rand(100000,999999);
+//        Crear sala, genera una hexadecimal como identificador de la misma
+        $array = [];
+        $array["code"] = $code;
+        $array["type"] = 1;
+        $sale = Sale::create($array);
 
-        $sale = Sale::create($request);
-        return redirect()->route('juego');
-
+//        return redirect()->route('nombreRuta');
+        $request = $request->all();
+        $request["role"] = 1;
+        $player = Player::create($request);
+//        dd($request);
     }
 
     /**
@@ -52,7 +60,7 @@ class Sale_controller extends Controller
      */
     public function show($id)
     {
-
+//        $sale = Sale::find($id)->where('type', '')->get();
     }
 
     /**

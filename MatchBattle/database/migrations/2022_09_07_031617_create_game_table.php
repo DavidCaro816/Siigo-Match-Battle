@@ -19,7 +19,7 @@ class CreateGameTable extends Migration
             $table->bigInteger('sale_id')->unsigned();
             $table->bigInteger('card_id')->unsigned();
 
-            $table->foreign('player_id')->references('id')->on('player');
+            $table->foreign('player_id')->references('id')->on('players');
             $table->foreign('sale_id')->references('id')->on('sale');
             $table->foreign('card_id')->references('id')->on('cards');
 

@@ -1,1 +1,1 @@
-@extends('game')
+@extends('app')

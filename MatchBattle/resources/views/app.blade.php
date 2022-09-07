@@ -18,28 +18,29 @@
     <br>
     <form action="{{route('juego.store')}}" method="post">
         @csrf
-    <div class="options">
+        <div class="options">
 
 
-                    <div class="input-group">
-                        <input type="text" name="nickname" autocomplete="off" class="input" required>
-                        <label class="user-label">Nickname</label>
-                    </div>
-                    <br>
-                    <button class="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span> Unirme a sala
-                    </button>
-                    <br>
-                    <button type="submit" class="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>Crear sala</button>
+            <div class="input-group">
+                <input type="text" name="nickname" autocomplete="off" class="input" required>
+                <label class="user-label">Nickname</label>
+            </div>
+            <br>
+            <button class="button" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span> Unirme a sala
+            </button>
+            <br>
+            <button type="submit" class="button">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>Crear sala
+            </button>
 
-    </div>
+        </div>
     </form>
 </div>
 
