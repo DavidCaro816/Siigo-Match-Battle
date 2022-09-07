@@ -37,8 +37,10 @@ class Sale_controller extends Controller
     public function store(Request $request)
     {
         //
+        $request=rand(100000,999999);
+
         $sale = Sale::create($request);
-        return redirect()->route('game');
+        return redirect()->route('juego');
 
     }
 
@@ -50,8 +52,7 @@ class Sale_controller extends Controller
      */
     public function show($id)
     {
-        $sale = Sale::find($id);
-        return = sal
+
     }
 
     /**

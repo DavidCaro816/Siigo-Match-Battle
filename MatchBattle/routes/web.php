@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::resource('juego', \App\Http\Controllers\Sale_controller::class);
+
+
+
+
+//Route Hooks - Do not delete//
+

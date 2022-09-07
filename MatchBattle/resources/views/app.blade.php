@@ -16,12 +16,13 @@
     @include('components.sidebar')
     @include('components.carousel')
     <br>
-    <form action="" method="post">
+    <form action="{{route('juego.store')}}" method="post">
+        @csrf
     <div class="options">
 
-            @csrf
+
                     <div class="input-group">
-                        <input type="text" name="text" autocomplete="off" class="input" required>
+                        <input type="text" name="nickname" autocomplete="off" class="input" required>
                         <label class="user-label">Nickname</label>
                     </div>
                     <br>
@@ -32,12 +33,11 @@
                         <span></span> Unirme a sala
                     </button>
                     <br>
-                    <button class="button">
+                    <button type="submit" class="button">
                         <span></span>
                         <span></span>
                         <span></span>
-                        <span></span> Crear sala
-                    </button>
+                        <span></span>Crear sala</button>
 
     </div>
     </form>
