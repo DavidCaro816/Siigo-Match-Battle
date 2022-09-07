@@ -15,3 +15,8 @@ mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
         //
     ]);
+
+mix.styles([
+    'resources/css/app.css/styles-3f0e3395c5.css',
+    'resources/css/app.css/rarity.css',
+], 'public/css/cards.css')
