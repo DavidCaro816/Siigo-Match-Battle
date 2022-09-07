@@ -1,1 +1,1 @@
-@extends('prueba')
+@extends('game')
