@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Models;
 
@@ -8,13 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Sale extends Model
 {
 	use HasFactory;
-	
+
     public $timestamps = true;
 
-    protected $table = 'sales';
+    protected $table = 'sale';
 
     protected $fillable = ['code','type'];
-	
+
     /**
      * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
@@ -22,5 +22,5 @@ class Sale extends Model
     {
         return $this->hasMany('App\Models\Game', 'sale_id', 'id');
     }
-    
+
 }
