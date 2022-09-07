@@ -3,7 +3,7 @@
 
 $cartasJug = [];
 $cartas = array();
-$player = [];
+
 
 // generamos cartas
 for($i = 1; $i <= 32; $i++) {
@@ -14,11 +14,16 @@ for($i = 1; $i <= 32; $i++) {
         continue;
     }
     // si no a salido añadimos al array
-    $player[
-        $cartas[] =  $aleatorio
-    ]
 
+    $cartas[] =  $aleatorio;
 }
+$i=0;
 foreach($cartas as $carta) {
-    echo $carta.'<br>';
+
+    $i++;
+    $player = [ $carta];
+
+    print_r($player).'<br>';
+
+
 }
