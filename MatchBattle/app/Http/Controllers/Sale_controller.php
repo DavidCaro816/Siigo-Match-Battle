@@ -50,6 +50,7 @@ class Sale_controller extends Controller
         $request["role"] = 1;
         $player = Player::create($request);
 //        dd($request);
+
     }
 
     /**

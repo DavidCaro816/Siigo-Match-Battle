@@ -15,7 +15,7 @@
 <p>3243543</p>
     </article>
 
-
+    @foreach($soccer as $player)
     <article class="con-player">
         <div class="img-player">
             <img src="https://cdn4.iconfinder.com/data/icons/miscellaneous-icons-1/200/misc_game_multiplayer-512.png" alt="">
@@ -23,12 +23,12 @@
         <div class="con-card-player">
 {{--            <img src="../../public/img/default_card.png" alt="" class="card">--}}
 {{--            <img src="../../public/img/unknown%20_card.png" alt="" class="card-back">--}}
-            {{--@foreach($soccer as $player)--}}
+
             @include('components.card')
-            {{--@endforeach--}}
+
         </div>
     </article>
-
+    @endforeach
 
     <article class="con-player con-player-main">
         <div class="img-player">
