@@ -41,7 +41,7 @@ class Sale_controller extends Controller
         //
         $code=rand(100000,999999);
 //        Crear sala, genera una hexadecimal como identificador de la misma
-        $array = [];
+         $array = [];
         $array["code"] = $code;
         $array["type"] = 1;
         $sale = Sale::create($array);
@@ -50,14 +50,14 @@ class Sale_controller extends Controller
         $request["role"] = 1;
         $player = Player::create($request);
 
+        $datos_game = [];
+
         $datos_game = [
             "player_id"=> $player->id,
             "sale_id" => $sale->id,
             "card_id" => "1",
         ];
         $game = Game::create($datos_game);
-
-//        return redirect()->route('sala.assignCard');
     }
 
     /**

@@ -18,7 +18,6 @@ Route::get('/', function () {
 });
 Route::resource('juego', \App\Http\Controllers\Sale_controller::class);
 Route::resource('partida', \App\Http\Controllers\Card_controller::class);
-Route::resource('sala', \App\Models\Game::class);
 
 
 Route::get('/game', function (){
