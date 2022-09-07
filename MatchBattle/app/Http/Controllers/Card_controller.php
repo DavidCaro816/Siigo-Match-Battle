@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Soccer_players;
 use Illuminate\Http\Request;
 
 class Card_controller extends Controller
@@ -14,6 +15,13 @@ class Card_controller extends Controller
     public function index()
     {
         //
+        $soccer = Soccer_players::select('categoty','name','avg','speed', 'endurance', 'strong', 'skill','defending','shoot','img','position')
+            ->join('positions', 'soccer_players.position_id', '=', 'position.id')
+            ->join('cards', 'soccer_player_id','=','soccer_players.id')
+            ->get();
+
+        return view('game', compact('soccer'));
+
     }
 
     /**
