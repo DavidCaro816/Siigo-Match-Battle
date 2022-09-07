@@ -62,8 +62,23 @@ body{
     width: 180px;
 }
  .content_tex{
-
+     height: 260px;
+        width: 430px;
+     border-radius: 1rem;
+        color: #ffffff;
+     background-color:#131821!important;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border: 1px solid #BF7BFFC7;
+     margin-left: 20px;
  }
+.content_tex p{
+    width: 350px;
+    text-align: center;
+    color: #ffffff;
+    background-color:#131821!important;
+}
 .navbar{
     width: 100vw;
     padding: 0!important;
