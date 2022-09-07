@@ -2,12 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cards;
 use App\Models\Game;
-use App\Models\Player;
-use App\Models\Room;
 use Illuminate\Http\Request;
 
-class Room_controller extends Controller
+class Game_controlller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +15,7 @@ class Room_controller extends Controller
      */
     public function index()
     {
-        $sale = Room::where('type', 1)->get();
-        return view('app', compact('sale'));
+        //
     }
 
     /**
@@ -27,7 +25,7 @@ class Room_controller extends Controller
      */
     public function create()
     {
-        $temp = 'a';
+        //
     }
 
     /**
@@ -39,25 +37,6 @@ class Room_controller extends Controller
     public function store(Request $request)
     {
         //
-        $code=rand(100000,999999);
-//        Crear sala, genera una hexadecimal como identificador de la misma
-         $array = [];
-        $array["code"] = $code;
-        $array["type"] = 1;
-        $sale = Room::create($array);
-
-        $request = $request->all();
-        $request["role"] = 1;
-        $player = Player::create($request);
-
-        $datos_game = [];
-
-        $datos_game = [
-            "player_id"=> $player->id,
-            "sale_id" => $sale->id,
-            "card_id" => "1",
-        ];
-        $game = Game::create($datos_game);
     }
 
     /**
@@ -68,7 +47,7 @@ class Room_controller extends Controller
      */
     public function show($id)
     {
-//        $sale = Room::find($id)->where('type', '')->get();
+        //
     }
 
     /**
@@ -103,5 +82,10 @@ class Room_controller extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function assignCard(){
+//        $cards = Cards::all();
+//        echo $cards;
+        echo 'a';
     }
 }
