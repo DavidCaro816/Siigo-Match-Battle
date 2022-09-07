@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Cards;
-use App\Models\Game;
+use App\Models\Games;
 use Illuminate\Http\Request;
 
-class Game_controlller extends Controller
+class Games_controlller extends Controller
 {
     /**
      * Display a listing of the resource.

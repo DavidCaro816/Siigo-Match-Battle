@@ -11,7 +11,7 @@ class Room extends Model
 
     public $timestamps = true;
 
-    protected $table = 'sale';
+    protected $table = 'room';
 
     protected $fillable = ['code','type'];
 
@@ -20,7 +20,7 @@ class Room extends Model
      */
     public function games()
     {
-        return $this->hasMany('App\Models\Game', 'sale_id', 'id');
+        return $this->hasMany('App\Models\Game', 'room_id', 'id');
     }
 
 }

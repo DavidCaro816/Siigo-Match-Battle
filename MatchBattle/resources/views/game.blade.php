@@ -12,7 +12,7 @@
 <body>
 <div class="container">
     <article class="con-num-sala">
-<p>3243543</p>
+<p>3243543 {{--{{$room->code}}--}}</p>
     </article>
 
     @foreach($soccer as $player)

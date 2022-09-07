@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Game;
+use App\Models\Games;
 use App\Models\Player;
 use App\Models\Room;
 use Illuminate\Http\Request;
@@ -16,8 +16,7 @@ class Room_controller extends Controller
      */
     public function index()
     {
-        $sale = Room::where('type', 1)->get();
-        return view('app', compact('sale'));
+        $room = Room::where('type', 1)->get();
     }
 
     /**
@@ -44,7 +43,7 @@ class Room_controller extends Controller
          $array = [];
         $array["code"] = $code;
         $array["type"] = 1;
-        $sale = Room::create($array);
+        $room = Room::create($array);
 
         $request = $request->all();
         $request["role"] = 1;
@@ -54,10 +53,12 @@ class Room_controller extends Controller
 
         $datos_game = [
             "player_id"=> $player->id,
-            "sale_id" => $sale->id,
+            "room_id" => $room->id,
             "card_id" => "1",
         ];
-        $game = Game::create($datos_game);
+        $room=($room->id);
+        $game = Games::create($datos_game);
+        return redirect('partida');
     }
 
     /**
