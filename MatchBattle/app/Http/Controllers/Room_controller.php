@@ -40,25 +40,31 @@ class Room_controller extends Controller
         //
         $code=rand(100000,999999);
 //        Crear sala, genera una hexadecimal como identificador de la misma
-         $array = [];
+        $array = [];
         $array["code"] = $code;
         $array["type"] = 1;
         $room = Room::create($array);
 
+//        return redirect()->route('nombreRuta');
         $request = $request->all();
         $request["role"] = 1;
         $player = Player::create($request);
 
-        $datos_game = [];
-
-        $datos_game = [
+        protected $datos = [
             "player_id"=> $player->id,
+<<<<<<< HEAD
             "room_id" => $room->id,
             "card_id" => "1",
         ];
         $room=($room->id);
         $game = Games::create($datos_game);
         return redirect('partida');
+=======
+            "sale_id"=> $sale->id,
+            "sale_id"=> 1,
+        ];
+            $game = Game::create($datos);
+>>>>>>> 6844633fd6d0bffb39dd31ae9f93ae078874693c
     }
 
     /**

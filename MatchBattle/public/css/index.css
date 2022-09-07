@@ -62,6 +62,7 @@ body{
     width: 180px;
 }
  .content_tex{
+     font-size: 1.2rem;
      height: 260px;
         width: 430px;
      border-radius: 1rem;
@@ -259,4 +260,8 @@ span:nth-child(2) {
     background-color: #16213E;
     padding: 0 .2em;
     color: #BF7BFFC7;
+}
+.content_tex span{
+    font-style: italic;
+    background: none;
 }
