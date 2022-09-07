@@ -10,6 +10,7 @@
         {{$player->position}}
     </div>
     <div class="playercard-nation">
+        p
     </div>
 
     <div class="playercard-picture">
