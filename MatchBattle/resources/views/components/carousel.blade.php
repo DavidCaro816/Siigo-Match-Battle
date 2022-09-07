@@ -45,6 +45,8 @@
                             <img src="{{url('img/default_card 2.png')}}" alt="">
                         </div>
                 </div>
+
+                <img src="https://astelus.com/wp-content/viajes/Lago-Moraine-Parque-Nacional-Banff-Alberta-Canada.jpg" alt="">
             </div>
         </div>
 
