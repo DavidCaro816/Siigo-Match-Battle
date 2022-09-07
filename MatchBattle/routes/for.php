@@ -21,7 +21,7 @@ $i=0;
 foreach($cartas as $carta) {
 
     $i++;
-    $player = [ $carta];
+    $player = array($i=>$carta);
 
     print_r($player).'<br>';
 

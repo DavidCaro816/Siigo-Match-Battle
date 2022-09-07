@@ -6,14 +6,26 @@
     <div class="carousel-inner">
         <div class="carousel-item active">
             <div class="carrousel_content_1">
-                <div class="info"></div>
-                <div class="text"></div>
-                <div class="img"></div>
+                <div class="content1">
+                    <div class="content_img">
+                        <img src="{{url('img/default_card 2.png')}}" alt="">
+                    </div>
+
+                    <div class="content_img2">
+                        <img src="{{url('img/default_card 2.png')}}" alt="">
+                    </div>
+                    <div class="content_tex">
+
+                    </div>
+                </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="carrousel_content_1">
+                <div class="content1">
 
+
+                </div>
             </div>
         </div>
 

@@ -26,10 +26,40 @@ body{
     background: #131821;
     border-radius: 1rem;
     width: 1500px;
-    height: 280px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
+.content1{
+    border: 1px solid #BF7BFFC7;
+    background: #131821;
+    border-radius: 1rem;
+    width: 830px;
+    height: 230px;
+    display: flex;
+    align-items: center;
 
+}
+.content_img{
+    width: 120px;
+    background-color: #131821
+;}
+.content_img2{
+    width: 120px;
+    background-color: #131821
+;
+}.content_img img{
+    padding-left: 30px;
+     background-color: #131821;
+    width: 200px;
+
+}.content_img2 img{
+margin-left: 500px;
+      background-color: #131821;
+    width: 200px;
+}
 .navbar{
     width: 100vw;
     padding: 0!important;
