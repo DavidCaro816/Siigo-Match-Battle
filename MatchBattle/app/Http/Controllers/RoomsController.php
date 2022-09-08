@@ -97,7 +97,10 @@ class RoomsController extends Controller
         $room = Room::where('code', $code)->first();
         $users = Game::where('room_id', $room->id)->get();
         $name = User::select('username', 'users.id')
-            ->join('games', 'games.id', '=', "user_id")->get();
+            ->join('games', 'users.id', '=', "user_id")
+            ->join('rooms', 'rooms.id', '=', "room_id")
+            ->where('room_id', $room->id)
+            ->get();
 
 
         //$cards = Soccer_players::select('soccer_players.category','soccer_players.name','soccer_players.avg','soccer_players.speed', 'soccer_players.endurance', 'soccer_players.strong', 'soccer_players.skill','soccer_players.defending',
@@ -109,6 +112,7 @@ class RoomsController extends Controller
         $cardsAssign = Game::select('games.user_id', 'games.card_id')
             ->join('rooms', 'rooms.id', '=' ,'room_id')
             ->join('cards', 'cards.id', '=', 'card_id')
+            ->where('room_id', $room->id)
             ->get();
 
        return view('room.show', compact('room','users', 'name', 'cardsAssign'));
