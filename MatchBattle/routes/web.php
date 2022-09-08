@@ -16,8 +16,6 @@ use App\Http\Controllers\RoomsController;
 
 
 Route::redirect('/', 'salas');
-Route::resource('salas', RoomsController::class);
-Route::resource('cartas', \App\Http\Controllers\Card_controller::class);
 
 Route::resource('salas', RoomsController::class);
 Route::post('salas/unirme', [RoomsController::class, 'addRoom'])->name('salas.addroom');

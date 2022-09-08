@@ -9,38 +9,50 @@
     <link rel="stylesheet" href="{{url('css/wait.css')}}">
 </head>
 <body>
-    <div class="container-wait" id="view-wait">
-<div class="room">
-    <div>
-        {{$room->code}}
-    </div>
-</div>
-{{--        @foreach($room as $sala)--}}
-{{--            {{dd($sala)}}--}}
-{{--        @endforeach--}}
-{{--            {{$sala}}--}}
-        <div class="players">
-{{--            {{$id = 0}}--}}
-            @foreach($name as $user)
-{{--            @if($id != $user->user_id && $id != 0 )--}}
-            <div>
-                <img src="{{url('img/perfil.png')}}" alt="">
-                <p>{{$user->username}}</p>
-            </div>
-{{--            {{$id = $user->user_id}}--}}
-{{--                @endif--}}
-            @endforeach
+<div class="container-wait" id="view-wait">
+    <div class="room">
+        <div>
+            {{$room->code}}
         </div>
-<div class="con-btn">
-    aaaa
-</div>
     </div>
-    <script>
+    <div class="players">
+        @php
+        $estado = 0;
+        $id = 0;
+        @endphp
+        @foreach($name as $user)
+            @if($user->id == 0 || $estado == 0)
+                <div>
+                    <img src="{{url('img/perfil.png')}}" alt="">
+                    <p>{{$user->username}}</p>
+                </div>
+            @php
+                $estado = 1;
+                $id = $user->id
+            @endphp
+                @if($estado == 1 && $user->id != $id)
+                    <div>
+                        <img src="{{url('img/perfil.png')}}" alt="">
+                        <p>{{$user->username}}</p>
+                    </div>
+                    @php
+                        $estado = 1;
+                        $id = $user->id
+                    @endphp
+                @endif
+            @endif
+        @endforeach
+    </div>
+    <div class="con-btn">
+        aaaa
+    </div>
+</div>
+<script>
     function recargar(){
         window.location.reload()
     }
 
     setInterval(recargar,3000)
-    </script>
+</script>
 </body>
 </html>
