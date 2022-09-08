@@ -15,7 +15,7 @@
 @include('layouts.components.sidebar')
 <div class="container-wait">
     <div class="players">
-        @foreach($cards as $card)
+        @foreach($cardsAssign as $card)
             <div class="cards">
                 @include('layouts.components.card')
             </div>

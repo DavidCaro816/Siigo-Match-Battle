@@ -21,31 +21,35 @@
         $id = 0;
         @endphp
         @foreach($name as $user)
-            @if($user->id == 0 || $estado == 0)
+            @if($id == 0 && $estado == 0)
                 <div>
                     <img src="{{url('img/perfil.png')}}" alt="">
                     <p>{{$user->username}}</p>
                 </div>
             @php
                 $estado = 1;
-                $id = $user->id
+                $id = $user->id;
             @endphp
-                @if($estado == 1 && $user->id != $id)
+            @endif
+                @if($id != $user->id)
                     <div>
                         <img src="{{url('img/perfil.png')}}" alt="">
                         <p>{{$user->username}}</p>
                     </div>
                     @php
-                        $estado = 1;
                         $id = $user->id
                     @endphp
                 @endif
-            @endif
         @endforeach
     </div>
-    <div class="con-btn">
-        aaaa
-    </div>
+{{--    <div class="con-btn">--}}
+{{--        <p>Tus cartas</p>--}}
+{{--            @foreach($cards as $card)--}}
+{{--                <div class="cards">--}}
+{{--                    @include('layouts.components.card')--}}
+{{--                </div>--}}
+{{--            @endforeach--}}
+{{--    </div>--}}
 </div>
 <script>
     function recargar(){
