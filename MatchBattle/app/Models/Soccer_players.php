@@ -10,6 +10,7 @@ class Soccer_players extends Model
     use HasFactory;
     protected $fillable = [
         'name',
+        'category',
         'age',
         'speed',
         'endurance',
@@ -18,5 +19,6 @@ class Soccer_players extends Model
         'strong',
         'shoot',
         'img',
+        'position_id'
     ];
 }

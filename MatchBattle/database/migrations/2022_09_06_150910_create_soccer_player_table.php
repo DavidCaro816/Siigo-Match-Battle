@@ -16,6 +16,7 @@ class CreateSoccerPlayerTable extends Migration
         Schema::create('soccer_players', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('category');
             $table->bigInteger('age');
             $table->bigInteger('avg');
             $table->bigInteger('speed');

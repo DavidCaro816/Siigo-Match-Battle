@@ -15,14 +15,11 @@ class CreateGamesTable extends Migration
     {
         Schema::create('games', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('player_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('room_id')->unsigned();
-            $table->bigInteger('card_id')->unsigned();
 
-            $table->foreign('player_id')->references('id')->on('players');
-            $table->foreign('room_id')->references('id')->on('room');
-            $table->foreign('card_id')->references('id')->on('cards');
-
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('room_id')->references('id')->on('rooms');
 
             $table->timestamps();
         });
@@ -35,6 +32,6 @@ class CreateGamesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('game');
+        Schema::dropIfExists('games');
     }
 }

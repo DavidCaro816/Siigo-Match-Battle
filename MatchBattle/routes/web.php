@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RoomsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::resource('juego', \App\Http\Controllers\Room_controller::class);
-Route::resource('partida', \App\Http\Controllers\Card_controller::class);
 
+Route::redirect('/', 'salas');
 
-Route::get('/game', function (){
-
-});
-
-
-
-
-//Route Hooks - Do not delete//
-
+Route::resource('salas', RoomsController::class);
+Route::post('salas/unirme', [RoomsController::class, 'addRoom'])->name('salas.addroom');
