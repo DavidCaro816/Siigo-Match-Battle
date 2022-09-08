@@ -15,7 +15,6 @@
     <article class="con-num-sala">
         <p>{{$room->code}}</p>
     </article>
-    @foreach($room)
     @foreach($users as $player)
 
         {{$idJugador = $player->id}}
@@ -28,7 +27,6 @@
                 {{--            <img src="../../public/img/unknown%20_card.png" alt="" class="card-back">--}}
 
 {{--                @include('layouts.components.card')--}}
-AAAAAAAAA
             </div>
         </article>
     @endforeach

@@ -96,15 +96,14 @@ class RoomsController extends Controller
     {
         $room = Room::where('code', $code)->first();
         $users = Game::where('room_id', $room->id)->get();
+        $name = User::select('username')
+            ->join('games', 'games.id', '=', "user_id")->get();
 
         $cards = Soccer_players::select('soccer_players.category','soccer_players.name','soccer_players.avg','soccer_players.speed', 'soccer_players.endurance', 'soccer_players.strong', 'soccer_players.skill','soccer_players.defending',
             'soccer_players.shoot','soccer_players.img as imgS', 'position')
             ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
-
             ->get();
-
-
-        return view('room.wait', compact('room','users', 'cards'));
+       return view('room.show', compact('room','users', 'cards', 'name'));
     }
 
     /**

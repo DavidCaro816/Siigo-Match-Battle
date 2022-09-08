@@ -12,7 +12,7 @@
     <div class="container-wait">
 <div class="room">
     <div>
-        1003004
+        {{$room->code}}
     </div>
 </div>
 {{--        @foreach($room as $sala)--}}
@@ -21,11 +21,11 @@
 {{--            {{$sala}}--}}
         <div class="players">
 {{--            {{$id = 0}}--}}
-            @foreach($users as $user)
+            @foreach($name as $user)
 {{--            @if($id != $user->user_id && $id != 0 )--}}
             <div>
                 <img src="{{url('img/perfil.png')}}" alt="">
-                <p>Nickname</p>
+                <p>{{$user->username}}</p>
             </div>
 {{--            {{$id = $user->user_id}}--}}
 {{--                @endif--}}
