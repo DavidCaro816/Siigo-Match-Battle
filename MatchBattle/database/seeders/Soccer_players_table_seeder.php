@@ -18,7 +18,7 @@ class Soccer_players_table_seeder extends Seeder
 
         $arrays = [
             ["name"=>"RONALDO", "age"=>37, "avg"=>91, "speed"=>83, "endurance"=>85, "skill"=>87, "defending"=>60, "strong"=>89, "img"=>"/img/soccer_player/cristiano.png", "position_id"=>16, "shoot"=>89, "category" => "A1"],
-            ["name"=>"MESSI", "age"=>35, "avg"=>92, "speed"=>80, "endurance"=>81, "skill"=>86, "defending"=>60, "strong"=>85, "img"=>"/img/soccer_player/messi.png.png", "position_id"=>10, "shoot"=>85, "category" => "A2"],
+            ["name"=>"MESSI", "age"=>35, "avg"=>92, "speed"=>80, "endurance"=>81, "skill"=>86, "defending"=>60, "strong"=>85, "img"=>"/img/soccer_player/messi.png", "position_id"=>10, "shoot"=>85, "category" => "A2"],
             ["name"=>"BENZEMA", "age"=>34, "avg"=>90, "speed"=>74, "endurance"=>86, "skill"=>96, "defending"=>60, "strong"=>79, "img"=>"/img/soccer_player/benzema.png", "position_id"=>16, "shoot"=>87, "category" => "A3"],
             ["name"=>"BRUYNE", "age"=>31, "avg"=>89, "speed"=>77, "endurance"=>82, "skill"=>87, "defending"=>67, "strong"=>69, "img"=>"/img/soccer_player/bruyne.png", "position_id"=>10, "shoot"=>87, "category" => "A4"],
             ["name"=>"COMAN", "age"=>26, "avg"=>86, "speed"=>82, "endurance"=>85, "skill"=>88, "defending"=>73, "strong"=>75, "img"=>"/img/soccer_player/coman.png", "position_id"=>8, "shoot"=>79, "category" => "B1"],

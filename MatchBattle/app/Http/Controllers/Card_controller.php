@@ -14,13 +14,13 @@ class Card_controller extends Controller
      */
     public function index()
     {
-        //$soccer = Soccer_players::select('category','name','avg','speed', 'endurance', 'strong', 'skill','defending',
-        //            'shoot','soccer_players.img as imgS','position')
-        //            ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
-        //            ->join('cards', 'soccer_player_id','=','soccer_players.id')
-        //            ->get();
-        //
-        //        return view('room.show', compact('soccer'));
+        $cards= Soccer_players::select('cards.category','name','avg','speed', 'endurance', 'strong', 'skill','defending',
+                   'shoot','soccer_players.img as imgS','position')
+                   ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
+                   ->join('cards', 'soccer_player_id','=','soccer_players.id')
+                   ->get();
+
+               return view('room.showCard', compact('cards'));
 
 
     }

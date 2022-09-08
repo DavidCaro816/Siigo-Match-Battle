@@ -1930,7 +1930,7 @@
 }
 
 .fut22.playercard.card-large {
-    transform: scale(0.5);
+    transform: scale(0.7);
     width: 240px;
     height: 340px;
     margin-left: -15px;
@@ -29032,3 +29032,12 @@
         background-image: radial-gradient(#66278E 30%, transparent 60%)
     }
 }
+
+.players{
+    display: grid;
+    grid-template-columns: repeat(6, 200px);
+    grid-template-rows: repeat(4, 200px);
+    justify-content: center;
+    row-gap: 50px;
+}
+

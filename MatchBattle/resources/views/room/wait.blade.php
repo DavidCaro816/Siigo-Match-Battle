@@ -32,7 +32,7 @@
             @endforeach
         </div>
 <div class="con-btn">
-        <button  id="btn-sub">Iniciar</button>
+    aaaa
 </div>
     </div>
     <script>
