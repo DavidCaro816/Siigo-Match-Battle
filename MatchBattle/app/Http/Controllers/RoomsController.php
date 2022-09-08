@@ -72,15 +72,15 @@ class RoomsController extends Controller
         foreach ($array as $ar){
             $i++;
             if($i<=7){
-                $TEMP = "aqui lo de abajo";
+                $game = Game::create([
+                    'user_id' => $user->id,
+                    'room_id' => $room->id,
+                    'card_id' => $ar
+                ]);
             }
 
         }
-        $game = Game::create([
-            'user_id' => $user->id,
-            'room_id' => $room->id,
-//                    'card_id' => $ar
-        ]);
+
 
         return redirect()->route('salas.show', $room->code);
 
@@ -96,14 +96,22 @@ class RoomsController extends Controller
     {
         $room = Room::where('code', $code)->first();
         $users = Game::where('room_id', $room->id)->get();
-        $name = User::select('username')
+        $name = User::select('username', 'users.id')
             ->join('games', 'games.id', '=', "user_id")->get();
 
-        $cards = Soccer_players::select('soccer_players.category','soccer_players.name','soccer_players.avg','soccer_players.speed', 'soccer_players.endurance', 'soccer_players.strong', 'soccer_players.skill','soccer_players.defending',
-            'soccer_players.shoot','soccer_players.img as imgS', 'position')
-            ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
+
+        //$cards = Soccer_players::select('soccer_players.category','soccer_players.name','soccer_players.avg','soccer_players.speed', 'soccer_players.endurance', 'soccer_players.strong', 'soccer_players.skill','soccer_players.defending',
+        //    'soccer_players.shoot','soccer_players.img as imgS', 'position')
+       //     ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
+        //    ->where('user_id', $name)
+        //    ->get();
+
+        $cardsAssign = Game::select('games.user_id', 'games.card_id')
+            ->join('rooms', 'rooms.id', '=' ,'room_id')
+            ->join('cards', 'cards.id', '=', 'card_id')
             ->get();
-       return view('room.show', compact('room','users', 'cards', 'name'));
+
+       return view('room.show', compact('room','users', 'name', 'cardsAssign'));
     }
 
     /**
@@ -126,7 +134,6 @@ class RoomsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $room = Room::where("code", $room)->update(['estado' =>  1]);
 
     }
 
@@ -177,8 +184,11 @@ class RoomsController extends Controller
                 foreach ($array as $ar){
                     $i++;
                     if($i<=7){
-                        $TEMP = "aqui lo de abajo";
-
+                        $game = Game::create([
+                            'user_id' => $user->id,
+                            'room_id' => $exist_room->id,
+                            'card_id' => $ar
+                        ]);
                     }
 
                 }
@@ -186,11 +196,7 @@ class RoomsController extends Controller
             }
 
             }
-        $game = Game::create([
-            'user_id' => $user->id,
-            'room_id' => $exist_room->id,
-//                            'card_id' => $ar
-        ]);
+
             return redirect()->route('salas.show', $exist_room->code);
         }
 
