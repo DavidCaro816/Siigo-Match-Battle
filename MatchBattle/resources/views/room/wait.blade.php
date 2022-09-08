@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{url('css/wait.css')}}">
 </head>
 <body>
-    <div class="container-wait">
+    <div class="container-wait" id="view-wait">
 <div class="room">
     <div>
         {{$room->code}}
@@ -32,16 +32,14 @@
             @endforeach
         </div>
 <div class="con-btn">
-{{--    <form action="{{route('salas.update')}}" method="post">--}}
-{{--        @csrf--}}
-{{--        <button type="submit" id="btn-sub">Iniciar</button>--}}
-{{--    </form>--}}
+        <button  id="btn-sub">Iniciar</button>
 </div>
     </div>
     <script>
     function recargar(){
         window.location.reload()
     }
+
     setInterval(recargar,3000)
     </script>
 </body>

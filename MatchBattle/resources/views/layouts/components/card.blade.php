@@ -1,4 +1,3 @@
-@foreach($cards as $card)
     <div class="playercard  fut22 card-large  nif  gold player-detail-card " style=" ">
     <span class="sheen"></span>
     <div class="playercard-rating">
@@ -10,8 +9,8 @@
     <div class="playercard-position">
         {{$card->position}}
     </div>
-    <div class="playercard-nation">
-
+    <div class="playercard-nation" style="color: black">
+        {{$card->category}}
     </div>
 
     <div class="playercard-picture">
@@ -45,4 +44,3 @@
         <span class="chembot-value">{{$card->endurance}}</span> <span class="playercard-thin">PHY</span>
         <span class="chembot-delta" data-chembot-field="attr6" data-chembot-base="{{$card->endurance}}"></span>
     </div>
-@endforeach

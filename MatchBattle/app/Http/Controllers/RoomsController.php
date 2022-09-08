@@ -102,12 +102,16 @@ class RoomsController extends Controller
             ->where('room_id', $room->id)
             ->get();
 
+        foreach ($name as $player){
+        $cards = Soccer_players::select('soccer_players.category','soccer_players.name','soccer_players.avg','soccer_players.speed', 'soccer_players.endurance', 'soccer_players.strong', 'soccer_players.skill','soccer_players.defending',
+            'soccer_players.shoot','soccer_players.img as imgS', 'position')
+            ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
+            ->join('games', 'games.card_id', '=', 'soccer_players.id')
+            ->where('user_id', $player->id)
+            ->get();
 
-        //$cards = Soccer_players::select('soccer_players.category','soccer_players.name','soccer_players.avg','soccer_players.speed', 'soccer_players.endurance', 'soccer_players.strong', 'soccer_players.skill','soccer_players.defending',
-        //    'soccer_players.shoot','soccer_players.img as imgS', 'position')
-       //     ->join('positions', 'soccer_players.position_id', '=', 'positions.id')
-        //    ->where('user_id', $name)
-        //    ->get();
+        }
+
 
         $cardsAssign = Game::select('games.user_id', 'games.card_id')
             ->join('rooms', 'rooms.id', '=' ,'room_id')
@@ -115,7 +119,7 @@ class RoomsController extends Controller
             ->where('room_id', $room->id)
             ->get();
 
-       return view('room.show', compact('room','users', 'name', 'cardsAssign'));
+       return view('room.show', compact('room','users', 'name', 'cardsAssign', 'cards'));
     }
 
     /**
